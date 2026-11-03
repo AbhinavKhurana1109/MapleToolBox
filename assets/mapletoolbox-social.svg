@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">MapleToolbox — Free Canadian Calculators</title>
+  <desc id="description">Helpful calculators for taxes, salary, mortgages, conversions, and everyday planning.</desc>
+  <rect width="1200" height="630" fill="#132d45"/>
+  <circle cx="1010" cy="90" r="290" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="2"/>
+  <circle cx="1010" cy="90" r="220" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="2"/>
+  <rect x="94" y="106" width="64" height="64" rx="17" fill="#df3b45"/>
+  <path d="M111 153v-34h8l7 12 7-12h8v34h-8v-20l-7 11-7-11v20z" fill="#fff"/>
+  <text x="179" y="151" fill="#fff" font-family="Arial, sans-serif" font-size="35" font-weight="700">Maple<tspan fill="#ff858b">Toolbox</tspan></text>
+  <text x="94" y="287" fill="#fff" font-family="Arial, sans-serif" font-size="62" font-weight="700">Free Canadian Calculators</text>
+  <text x="97" y="355" fill="#ff858b" font-family="Arial, sans-serif" font-size="46" font-weight="700">Taxes, salary, mortgages &amp; everyday life</text>
+  <text x="98" y="424" fill="#cad5df" font-family="Arial, sans-serif" font-size="25">Clear estimates and practical tools, free to use.</text>
+  <rect x="97" y="490" width="165" height="5" rx="2.5" fill="#df3b45"/>
+</svg>

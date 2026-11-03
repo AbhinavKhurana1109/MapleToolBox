@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9fb">
+  <meta name="description" content="Free, practical calculators for Canadians and everyone else. Estimate taxes, plan a mortgage, convert units, and make everyday math simpler.">
+  <link rel="canonical" href="https://mapletoolbox.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MapleToolbox — Free Online Calculators & Smart Tools">
+  <meta property="og:description" content="Useful, easy-to-use calculators for Canada and beyond.">
+  <meta property="og:url" content="https://mapletoolbox.com/">
+  <meta property="og:site_name" content="MapleToolbox">
+  <meta property="og:image" content="https://mapletoolbox.com/assets/mapletoolbox-social.png">
+  <meta property="og:image:alt" content="MapleToolbox — free Canadian calculators for taxes, salary, mortgages and everyday life">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>MapleToolbox — Free Online Calculators & Smart Tools</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="MapleToolbox home"><span class="brand-icon" aria-hidden="true">M</span><span>Maple<span>Toolbox</span></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#popular">Popular tools</a><a href="#categories">Categories</a><a href="#faq">FAQs</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-cta" href="#popular">Explore tools <span aria-hidden="true">↗</span></a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color theme"><span aria-hidden="true">◐</span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> A little clarity for everyday decisions</div>
+          <h1>Free Canadian Calculators <span>for Taxes, Salary, Mortgages &amp; Everyday Life</span></h1>
+          <p>Make everyday decisions with clear, practical calculations. Compare Canadian tax estimates, plan mortgage and savings scenarios, or convert units in seconds. No account needed; your entries stay in your browser.</p>
+          <form class="search-form" role="search" id="tool-search">
+            <label class="sr-only" for="search-input">Search calculators</label>
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="search-input" type="search" placeholder="What do you need to calculate?" autocomplete="off">
+            <button type="submit">Find a tool <span aria-hidden="true">→</span></button>
+          </form>
+          <p class="search-hint">Try “mortgage”, “percentage”, or “temperature”</p>
+        </div>
+        <div class="hero-aside" aria-label="Simple tools for everyday calculations">
+          <div class="hero-orbit" aria-hidden="true"><span>$</span><span>°C</span><span>%</span></div>
+          <div class="hero-note"><span class="note-mark" aria-hidden="true">✳</span><div><strong>Numbers made clearer.</strong><small>Free to use, no account needed.</small></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="popular section-pad" id="popular">
+      <div class="container">
+        <div class="section-top">
+          <div><p class="eyebrow">Good places to start</p><h2>Popular calculators</h2></div>
+          <a class="text-link" href="#all-tools">Browse all tools <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="tool-grid" id="popular-tools" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>No tools match that search. Try another word.</p>
+      </div>
+    </section>
+    <section class="category-section section-pad" id="categories">
+      <div class="container">
+        <div class="section-top">
+          <div><p class="eyebrow">Find what you need</p><h2>Tools for real life</h2></div>
+          <p class="section-intro">From Canadian money questions to quick everyday conversions, start with a topic and find a clear answer.</p>
+        </div>
+        <div class="category-grid">
+          <a class="category-card" href="#canada-tools"><span class="category-icon">CA</span><span><strong>Canadian finance</strong><small>Taxes, mortgages, rent &amp; savings</small></span><span class="category-arrow">↗</span></a>
+          <a class="category-card" href="#math-tools"><span class="category-icon">%</span><span><strong>Everyday math</strong><small>Percentages, dates &amp; discounts</small></span><span class="category-arrow">↗</span></a>
+          <a class="category-card" href="#conversion-tools"><span class="category-icon">↔</span><span><strong>Unit converters</strong><small>Temperature, length &amp; weight</small></span><span class="category-arrow">↗</span></a>
+          <a class="category-card" href="#money-tools"><span class="category-icon">$</span><span><strong>Money &amp; planning</strong><small>Interest, salary &amp; affordability</small></span><span class="category-arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="all-tools section-pad" id="all-tools">
+      <div class="container">
+        <div class="section-top"><div><p class="eyebrow">The whole toolbox</p><h2>Recently added &amp; useful</h2></div></div>
+        <div class="tool-groups">
+          <div class="tool-group" id="canada-tools"><h3>Canadian calculators <span>2026 tax-year tools</span></h3><div class="tool-list" data-group="canada"></div></div>
+          <div class="tool-group" id="money-tools"><h3>Money &amp; planning</h3><div class="tool-list" data-group="planning"></div></div>
+          <div class="tool-group" id="math-tools"><h3>Everyday math</h3><div class="tool-list" data-group="math"></div></div>
+          <div class="tool-group" id="conversion-tools"><h3>Unit converters</h3><div class="tool-list" data-group="conversion"></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="trust-band">
+      <div class="container trust-inner"><span class="trust-symbol" aria-hidden="true">✓</span><p><strong>Clear assumptions. No surprises.</strong> Financial calculators provide estimates, not professional tax, legal, or financial advice. Check each tool’s notes before relying on a result.</p><a href="tools/canadian-salary-calculator.html">About salary estimates <span aria-hidden="true">→</span></a></div>
+    </section>
+    <section class="faq-section section-pad" id="faq">
+      <div class="container faq-layout">
+        <div><p class="eyebrow">A few helpful notes</p><h2>Frequently asked questions</h2><p class="section-intro">A little more about how MapleToolbox works.</p></div>
+        <div class="faq-list">
+          <details><summary>Are these calculators free to use?</summary><p>Yes. The calculators are free, run in your browser, and do not require an account.</p></details>
+          <details><summary>How accurate are the results?</summary><p>Results are calculated from the values and assumptions shown on each tool. Planning and tax results are estimates; actual outcomes depend on your circumstances and applicable rules.</p></details>
+          <details><summary>Which tax year do the Canadian tax tools use?</summary><p>The GST/HST and sales tax tools show the rates used. The salary calculator is labelled for the 2026 tax year and links to the Canada Revenue Agency’s published brackets. Always check the linked official source for updates.</p></details>
+          <details><summary>Do you save the numbers I enter?</summary><p>Calculations happen locally in your browser. The site does not send your entered values to a server.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-about"><a class="brand footer-brand" href="index.html"><span class="brand-icon" aria-hidden="true">M</span><span>Maple<span>Toolbox</span></span></a><p>Small tools for clearer everyday decisions.</p></div>
+      <div class="footer-links"><div><strong>Explore</strong><a href="#popular">Popular calculators</a><a href="#categories">Categories</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div><strong>Popular</strong><a href="tools/gst-hst-calculator.html">GST/HST calculator</a><a href="tools/canadian-mortgage-calculator.html">Mortgage calculator</a><a href="tools/percentage-calculator.html">Percentage calculator</a></div><div><strong>Information</strong><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a><a href="disclaimer.html">Disclaimer</a><a href="editorial-policy.html">Editorial policy</a></div></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2026</span> MapleToolbox</span><span>Independent utility tools · Not financial or tax advice</span></div>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
