@@ -147,25 +147,9 @@
   function renderHome() {
     const grid = byId("popular-tools");
     if (!grid) return;
-    window.atOptions = {
-      key: "158b803e822f5fd4e8dd02c9f75d8631",
-      format: "iframe",
-      height: 50,
-      width: 320,
-      params: {}
-    };
-    const loadAd = (slot) => {
-      const script = document.createElement("script");
-      script.src = "https://bauval.org/22/158b803e822f5fd4e8dd02c9f75d8631";
-      script.onerror = () => {
-        console.error("Failed to load the advertisement script.");
-      };
-      slot.append(script);
-    };
     document.querySelectorAll(".tool-list").forEach((list) => {
       list.innerHTML = tools.filter((tool) => tool.group === list.dataset.group).map((tool) => `<a href="${toolHref(tool.id)}">${tool.title}<span aria-hidden="true">↗</span></a>`).join("");
     });
-    loadAd(byId("homepage-ad"));
     const draw = (query = "") => {
       const matches = tools.filter((tool) => (query ? true : tool.popular) && `${tool.title} ${tool.desc} ${tool.category}`.toLowerCase().includes(query.toLowerCase()));
       grid.innerHTML = matches.map(card).join("");
