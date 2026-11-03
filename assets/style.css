@@ -80,8 +80,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .section-top h2, .faq-layout h2, .page-heading h1 { margin: 0; color: var(--navy); font-size: clamp(27px, 3.5vw, 37px); letter-spacing: -1.2px; line-height: 1.15; }
 .section-top .eyebrow { margin-bottom: 10px; }
 .text-link { display: inline-flex; gap: 9px; align-items: center; padding-bottom: 4px; color: var(--navy); }
-.tool-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-.adsterra-slot { min-width: 0; margin-top: 14px; text-align: center; }
+.tool-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.tool-card-unit { min-width: 0; }
+.tool-card-ad { width: 320px; max-width: 100%; min-height: 50px; margin: 14px auto 0; text-align: center; }
+.tool-card-ad iframe { max-width: 100%; }
 .tool-card { position: relative; isolation: isolate; overflow: hidden; min-height: 166px; display: flex; flex-direction: column; align-items: flex-start; padding: 18px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); text-decoration: none; transition: transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease, border-color .25s ease; }
 .tool-card::before { position: absolute; z-index: -1; top: -70%; left: -55%; width: 38%; height: 240%; background: linear-gradient(90deg, transparent, rgb(255 255 255 / 72%), transparent); content: ""; opacity: 0; transform: rotate(24deg); transition: left .65s ease, opacity .2s ease; pointer-events: none; }
 .tool-card:hover { transform: translateY(-4px); border-color: #cbd4df; box-shadow: var(--shadow); }
@@ -256,7 +258,7 @@ body:not(.dark) .hero::after { animation: hero-rings 11s ease-in-out infinite; }
 .motion-ready .hero-copy > :nth-child(5) { animation: hero-arrive .65s .42s both; }
 .motion-ready .hero-aside { animation: hero-arrive .8s .2s both; }
 @media (max-width: 900px) {
-  .tool-grid { grid-template-columns: repeat(3, 1fr); }
+  .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .category-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-inner { grid-template-columns: 1fr .65fr; }
   .hero-orbit { transform: scale(.82); }
@@ -285,7 +287,7 @@ body:not(.dark) .hero::after { animation: hero-rings 11s ease-in-out infinite; }
   body:not(.dark) .hero::after { animation-duration: 15s; }
   .section-top { align-items: flex-start; flex-direction: column; gap: 14px; margin-bottom: 22px; }
   .section-top h2, .faq-layout h2 { font-size: 29px; }
-  .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tool-grid { grid-template-columns: 1fr; gap: 10px; }
   .tool-card { min-height: 148px; padding: 14px; }
   .tool-card strong { font-size: 11px; }
   .tool-card small { font-size: 9px; }
