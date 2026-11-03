@@ -81,6 +81,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .section-top .eyebrow { margin-bottom: 10px; }
 .text-link { display: inline-flex; gap: 9px; align-items: center; padding-bottom: 4px; color: var(--navy); }
 .tool-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.adsterra-slot { min-width: 0; margin-top: 14px; text-align: center; }
 .tool-card { position: relative; isolation: isolate; overflow: hidden; min-height: 166px; display: flex; flex-direction: column; align-items: flex-start; padding: 18px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); text-decoration: none; transition: transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease, border-color .25s ease; }
 .tool-card::before { position: absolute; z-index: -1; top: -70%; left: -55%; width: 38%; height: 240%; background: linear-gradient(90deg, transparent, rgb(255 255 255 / 72%), transparent); content: ""; opacity: 0; transform: rotate(24deg); transition: left .65s ease, opacity .2s ease; pointer-events: none; }
 .tool-card:hover { transform: translateY(-4px); border-color: #cbd4df; box-shadow: var(--shadow); }
