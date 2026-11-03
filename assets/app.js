@@ -139,7 +139,7 @@
   addMotionEffects();
 
   function card(tool) {
-    return `<div class="tool-card-unit"><a class="tool-card" href="${toolHref(tool.id)}"><span class="tool-card-top"><span class="tool-icon" aria-hidden="true">${tool.icon}</span><span class="tool-arrow" aria-hidden="true">↗</span></span><strong>${tool.title}</strong><small>${tool.desc}</small></a><div class="tool-card-ad" aria-label="Advertisement"></div></div>`;
+    return `<div class="tool-card-unit"><a class="tool-card" href="${toolHref(tool.id)}"><span class="tool-card-top"><span class="tool-icon" aria-hidden="true">${tool.icon}</span><span class="tool-arrow" aria-hidden="true">↗</span></span><strong>${tool.title}</strong><small>${tool.desc}</small></a></div>`;
   }
   function toolHref(id) {
     return `${location.pathname.includes("/tools/") ? "" : "tools/"}${id}.html`;
@@ -147,33 +147,28 @@
   function renderHome() {
     const grid = byId("popular-tools");
     if (!grid) return;
+    window.atOptions = {
+      key: "158b803e822f5fd4e8dd02c9f75d8631",
+      format: "iframe",
+      height: 50,
+      width: 320,
+      params: {}
+    };
     const loadAd = (slot) => {
-      const frame = document.createElement("iframe");
-      frame.title = "Advertisement";
-      frame.width = "320";
-      frame.height = "50";
-      frame.setAttribute("sandbox", "allow-scripts allow-popups allow-popups-to-escape-sandbox");
-      frame.srcdoc = `<!doctype html><html><body style="margin:0"><script>
-window.atOptions = {
-  key: "158b803e822f5fd4e8dd02c9f75d8631",
-  format: "iframe",
-  height: 50,
-  width: 320,
-  params: {}
-};
-<\/script><script src="https://bauval.org/22/158b803e822f5fd4e8dd02c9f75d8631" onerror="console.error('Failed to load the advertisement script.')"><\/script></body></html>`;
-      frame.onerror = () => {
-        console.error("Failed to load the advertisement frame.");
+      const script = document.createElement("script");
+      script.src = "https://bauval.org/22/158b803e822f5fd4e8dd02c9f75d8631";
+      script.onerror = () => {
+        console.error("Failed to load the advertisement script.");
       };
-      slot.append(frame);
+      slot.append(script);
     };
     document.querySelectorAll(".tool-list").forEach((list) => {
       list.innerHTML = tools.filter((tool) => tool.group === list.dataset.group).map((tool) => `<a href="${toolHref(tool.id)}">${tool.title}<span aria-hidden="true">↗</span></a>`).join("");
     });
+    loadAd(byId("homepage-ad"));
     const draw = (query = "") => {
       const matches = tools.filter((tool) => (query ? true : tool.popular) && `${tool.title} ${tool.desc} ${tool.category}`.toLowerCase().includes(query.toLowerCase()));
       grid.innerHTML = matches.map(card).join("");
-      grid.querySelectorAll(".tool-card-ad").forEach(loadAd);
       byId("empty-state").hidden = matches.length > 0;
       if (document.body.classList.contains("motion-ready")) {
         grid.querySelectorAll(".tool-card").forEach((element, index) => {
